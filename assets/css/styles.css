@@ -63,22 +63,19 @@ p {
 
 #page1 {
     height: auto;
-    width: 100vw;
-    display: flex;
-    gap: 20px;
+    width: 100%;
     padding: 26px;
 }
 
 .hero-content {
     height: 100%;
-    width: 55%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #eef2f3;
     border-radius: 20px;
     padding: 20px;
-    padding-left: 50px;
 }
 
 /* NAVIGATION START */
@@ -86,8 +83,9 @@ p {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 8px;
 }
 
 .logo {
@@ -96,11 +94,15 @@ nav {
 }
 
 .link-cover {
-    display: flex;
+    display: none;
     flex: 1;
     justify-content: flex-end;
     align-items: center;
     gap: 40px;
+}
+
+.menu-icon{
+    font-size: 20px;
 }
 
 .nav-link {
@@ -123,13 +125,13 @@ nav {
     justify-content: center;
     flex: 1;
     padding-left: 20px;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 .hero-title {
     font-family: "ZawyaProBold";
-    font-size: 4.8vw;
-    line-height: 5.4vw;
+    font-size: 5.5vw;
+    line-height: 6vw;
 }
 
 .t-book {
@@ -138,50 +140,45 @@ nav {
 }
 
 .t-description {
-    margin-top: 20px;
-    line-height: 28px;
+    margin-top: 10px;
     color: #696969;
-    font-size: 18px;
+    line-height: 23px;
+    font-size: 16px;
 }
 
 .buttons-container {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 22px;
     gap: 10px;
 }
 
 .button {
     border: 1px solid #000;
     border-radius: 100px;
-    padding: 12px 20px;
+    padding: 6px 14px;
     cursor: pointer;
 }
 
 .btn-text {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .arrow-button {
     border: 1px solid #000;
     background-color: #000;
     border-radius: 100px;
-    padding: 12px 26px;
+    padding: 7px 14px;
     cursor: pointer;
 }
 
 .right-arrow {
-    font-size: 21px;
+    font-size: 16px;
     color: #ffffff;
 }
 
 .hero-image {
-    display: flex;
-    flex: 1;
-    width: 40%;
-    background-color: #fee4c9;
-    border-radius: 20px;
     display: none;
 }
 
@@ -200,12 +197,12 @@ nav {
 .community-container {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 38px;
 }
 
 .community-text {
     font-family: "ZawyaProNormal";
-    font-size: 14px;
+    font-size: 12px;
     color: #504c4d;
 }
 
@@ -213,13 +210,13 @@ nav {
     display: flex;
     width: 100%;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 
 .user-container {
     background-image: url("../images/users.png");
-    width: 150px;
-    height: 80px;
+    width: 112px;
+    height: 60px;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -231,7 +228,7 @@ nav {
 }
 
 .count-text {
-    font-size: 30px;
+    font-size: 22px;
     font-family: "ZawyaProBold";
     color: #000;
 }
@@ -239,29 +236,30 @@ nav {
 .count-sub-text {
     font-size: 12px;
     color: #504c4d;
+    line-height: 22px;
 }
 
 /* Smartphones */
-@media screen and (max-width: 480px) {}
+/* @media screen and (max-width: 480px) {} */
 
 /* Tablets */
-@media screen and (min-width: 481px) and (max-width: 767px) {
+/* @media screen and (min-width: 481px) and (max-width: 767px) {
     .hero-content{
         width: 100%;
     }
-}
+} */
 
 /* Standard desktops and laptops */
-@media screen and (min-width: 1025px) {
+/* @media screen and (min-width: 1025px) {
     .hero-image{
         display: block;
     }
-}
+} */
 
 /* Large desktops */
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
 
-}
+} */
 
 /* ----------------------- PAGE 2 ----------------------- */
 
@@ -275,7 +273,7 @@ nav {
 }
 
 .t-text-cover {
-    height: 300px;
+    padding: 30px 20px;
     width: 100%;
     background-color: #eef2f3;
     display: flex;
@@ -287,8 +285,8 @@ nav {
 
 .tb-title {
     font-family: "ZawyaProBold";
-    font-size: 60px;
-    line-height: 80px;
+    font-size: 30px;
+    line-height: 36px;
 }
 
 .mt40 {
@@ -296,13 +294,13 @@ nav {
 }
 
 .view-all-btn {
-    padding: 12px 40px;
+    padding: 6px 27px;
 }
 
 .tb-sub-text {
     font-family: "GilroyMedium";
-    font-size: 26px;
-    margin-top: 14px;
+    font-size: 16px;
+    margin-top: 8px;
     color: #444645;
 }
 
@@ -311,16 +309,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .book-card {
     display: flex;
     flex-direction: column;
-    height: 500px;
     width: calc((100% / 3) - 10px);
     border-radius: 20px;
-    padding: 30px;
+    padding: 14px;
     padding-bottom: 0;
     overflow: hidden;
 }
@@ -344,20 +341,21 @@ nav {
 }
 
 .b-title {
-    font-size: 18px;
+    font-size: 14px;
     color: #1b171d;
 }
 
 .b-price {
     font-family: "ZawyaProBold";
-    font-size: 30px;
+    font-size: 24px;
     color: #1b171d;
-    margin-top: 10PX;
+    margin-top: 6PX;
 }
 
 .round-button {
-    height: 60px;
-    width: 60px;
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
     border-radius: 30px;
     background-color: #ffffff;
     display: flex;
@@ -366,8 +364,8 @@ nav {
 }
 
 .up-arrow {
-    height: 20px;
-    width: 20px;
+    height: 14px;
+    width: 14px;
     background-image: url('../images/arrow-up.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -378,12 +376,13 @@ nav {
 }
 
 .book-image {
+    width: 100%;
+    height: 150px;
     display: flex;
-    flex: 1;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    margin-top: 70px;
+    margin-top: 28px;
 }
 
 .b-one-img {
@@ -399,27 +398,21 @@ nav {
 }
 
 .star {
-    height: 50px;
-    width: 50px;
+    height: 26px;
+    width: 26px;
+    min-width: 26px;
     background-image: url('../images/star.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .mp-l-star {
-    position: absolute;
-    left: 200px;
+    display: none;
 }
 
 .mp-r-star {
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    right: 200px;
-    margin-top: 120px;
+   display: none;
 }
-
-
 
 /* ----------------------- PAGE 3 ----------------------- */
 
@@ -427,17 +420,21 @@ nav {
     width: 100vw;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    gap:10px;
     justify-content: space-between;
-    padding: 26px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 18px;
+    margin-top: 12px;
+    margin-bottom: 20px;
     border-top: 1px solid #c1c1c1;
     border-bottom: 1px solid #c1c1c1;
 }
 
 .best-seller-text {
     font-family: "ZawyaProNormal";
-    font-size: 24px;
+    font-size: 14px;
+    line-height: 16px;
+    white-space: nowrap;
 }
 
 /* ----------------------- PAGE 4 ----------------------- */
@@ -1063,7 +1060,7 @@ textarea {
     color: #F2F3EB;
 }
 
-@media screen and (max-width: 768px) {}
+/* @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 480px) {
     .underline {
@@ -1086,7 +1083,7 @@ textarea {
     textarea {
         font-size: 0.875em;
     }
-}
+} */
 
 /* FORM END */
 
@@ -1230,5 +1227,189 @@ textarea {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media(min-width:768px){
+    .link-cover{
+       display: flex;
+    }
+
+    nav{
+        padding: 20px;
+    }
+
+    .menu-icon{
+        visibility: hidden;
+    }
+
+    #page1{
+        display: flex;
+        gap: 20px;
+    }
+
+    .hero-content{
+        padding-left: 50px;
+        width: 55%;
+    }
+
+    .hero-image{
+        display: flex;
+        flex: 1;
+        width: 40%;
+        background-color: #fee4c9;
+        border-radius: 20px;
+    }
+
+    .text-container{
+        padding-top: 100px;
+    }
+
+    .hero-title{
+        font-size: 4.8vw;
+        max-width: 530px;
+        line-height: 5.4vw;
+    }
+
+    .t-description{
+        margin-top: 20px;
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    .button{
+        padding: 12px 20px;
+    }
+
+    .btn-text{
+        font-size: 18px;
+    }
+
+    .arrow-button{
+        padding: 12px 26px;
+    }
+
+    .right-arrow{
+        font-size: 21px;
+    }
+
+    .community-container{
+        margin-top: 60px;
+    }
+
+    .buttons-container{
+        margin-top: 30px;
+    }
+
+    .community-text{
+        font-size: 14px;
+    }
+
+    .user-container{
+        width: 150px;
+        height: 80px;
+    }
+
+    .user-text-container{
+        margin-top: 20px;
+    }
+
+    .count-text{
+        font-size: 30px;
+    }
+
+    .count-sub-text{
+        line-height: 26px;
+    }
+
+    #page2{
+        
+    }
+
+    .t-text-cover{
+        padding: 0px;
+        height: 300px;
+    }
+
+    .mp-l-star {
+        display: block;
+        position: absolute;
+        left: 200px;
+    }
+    
+    .mp-r-star {
+        display: block;
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        right: 200px;
+        margin-top: 120px;
+    }
+
+    .tb-title{
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    .tb-sub-text{
+        font-size: 26px;
+        margin-top: 14px;
+    }
+
+    .view-all-btn{
+        padding: 12px 40px;
+    }
+
+    .books-container{
+        gap: 20px;
+    }
+
+    .book-card{
+        height: 500px;
+        padding: 30px;
+    }
+
+    .round-button {
+        height: 60px;
+        width: 60px;
+    }
+
+    .up-arrow {
+        height: 20px;
+        width: 20px;
+    }
+
+    .b-title {
+        font-size: 18px;
+    }
+
+    .b-price {
+        font-family: "ZawyaProBold";
+        font-size: 30px;
+        color: #1b171d;
+        margin-top: 10PX;
+    }
+
+    .book-image {
+        height: auto;
+        width: auto;
+        flex: 1;
+        margin-top: 70px;
+    }
+
+    #page3{
+        padding: 26px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .best-seller-text {
+        font-size: 24px;
+    }
+
+    .star {
+        height: 50px;
+        width: 50px;
+        min-width: 50px;
     }
 }
