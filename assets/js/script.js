@@ -1,6 +1,5 @@
 function loco() {
     gsap.registerPlugin(ScrollTrigger);
-    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector("#main"),
@@ -25,45 +24,24 @@ function loco() {
 
 loco();
 
+// Image Movement
 VanillaTilt.init(document.querySelector('.girl-image'), {
     max: 10,
     speed: 100
 });
 
 function loadinganimation() {
-    gsap.from("#page1 h1", {
+    gsap.from("#page1 .text-container", {
         y: 100,
         opacity: 0,
         delay: 0.5,
         duration: 0.9,
         stagger: 0.3,
     });
-    gsap.from("#page1 .t-description", {
-        y: 100,
-        opacity: 0,
-        delay: 1.5,
-        duration: 0.9,
-        stagger: 0.3,
-    });
-    gsap.from("#page1 .buttons-container", {
-        y: 100,
-        opacity: 0,
-        delay: 2,
-        duration: 0.9,
-        stagger: 0.3,
-    });
-
-    gsap.from("#page1 .community-container", {
-        y: 100,
-        opacity: 0,
-        delay: 2.5,
-        duration: 0.9,
-        stagger: 0.3,
-    });
     gsap.from("#page1 .girl-image", {
         scale: 0.9,
         opacity: 0,
-        delay: 1.3,
+        delay: 0.5,
         duration: 0.5,
     });
 }

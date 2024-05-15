@@ -62,7 +62,7 @@ p {
 /* ----------------------- PAGE 1 ----------------------- */
 
 #page1 {
-    height: 110vh;
+    height: auto;
     width: 100vw;
     display: flex;
     gap: 20px;
@@ -128,8 +128,13 @@ nav {
 
 .hero-title {
     font-family: "ZawyaProBold";
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 4.8vw;
+    line-height: 5.4vw;
+}
+
+.t-book {
+    height: 4.4vw;
+    width: auto;
 }
 
 .t-description {
@@ -172,15 +177,24 @@ nav {
 }
 
 .hero-image {
-    height: 100%;
-    width: 45%;
+    display: flex;
+    flex: 1;
+    width: 40%;
     background-color: #fee4c9;
     border-radius: 20px;
+    display: none;
 }
 
-.t-book {
-    height: 60px;
-    width: auto;
+.girl-image {
+    height: 50vw;
+    width: 40vw;
+    top: 100px;
+    right: 160px;
+    background-image: url("../images/girl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    filter: drop-shadow(5px 5px 5px #bbbbbb45);
 }
 
 .community-container {
@@ -227,18 +241,27 @@ nav {
     color: #504c4d;
 }
 
-.girl-image {
-    height: 750px;
-    width: 600px;
-    top: 100px;
-    right: 160px;
-    background-image: url("../images/girl.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    filter: drop-shadow(5px 5px 5px #bbbbbb45);
+/* Smartphones */
+@media screen and (max-width: 480px) {}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .hero-content{
+        width: 100%;
+    }
 }
 
+/* Standard desktops and laptops */
+@media screen and (min-width: 1025px) {
+    .hero-image{
+        display: block;
+    }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1200px) {
+
+}
 
 /* ----------------------- PAGE 2 ----------------------- */
 
