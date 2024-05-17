@@ -704,7 +704,6 @@ nav {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 26px;
 }
 
 .about-page-content {
@@ -714,11 +713,10 @@ nav {
   /* background-color: #eef2f3; */
   border-radius: 20px;
   padding: 0px 20px;
-  padding-left: 50px;
 }
 
 .about-text-cover {
-  padding: 60px 200px;
+  padding: 40px 26px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -726,9 +724,13 @@ nav {
   align-items: center;
 }
 
+.about-image-covevr-main {
+  padding: 0px 26px;
+}
+
 .about-image-covevr {
   width: 100%;
-  height: 600px;
+  height: 300px;
   background-color: #000;
   border-radius: 20px;
   background-image: url("../images/about.jpg");
@@ -741,6 +743,7 @@ nav {
   align-self: center;
   display: flex;
   margin-top: 60px;
+  padding: 0px 26px;
 }
 
 .about-title-cover {
@@ -787,13 +790,12 @@ nav {
 /* ------------------------------------------------------ */
 /* --------------------- CONTACT US --------------------- */
 /* ------------------------------------------------------ */
-
 .title-description-text {
-  font-size: 20px;
-  margin-top: 14px;
+  font-size: 16px;
+  margin-top: 8px;
   text-align: center;
   color: #474544;
-  line-height: 30px;
+  line-height: 26px;
 }
 
 .text-left {
@@ -1140,6 +1142,9 @@ textarea {
 }
 
 @media (min-width: 500px) {
+  .about-text-cover {
+    padding: 60px 200px;
+  }
   .books-container {
     flex-direction: row;
     align-items: center;
@@ -1153,6 +1158,17 @@ textarea {
   }
   .service-main-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about-page-content {
+    padding-left: 50px;
+  }
+  .title-description-text {
+    font-size: 20px;
+    margin-top: 14px;
+    line-height: 30px;
+  }
+  .about-image-covevr {
+    height: 600px;
   }
 }
 
