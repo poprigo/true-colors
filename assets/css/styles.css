@@ -44,6 +44,10 @@ body {
   justify-content: center;
 }
 
+.text-centre {
+  text-align: center;
+}
+
 #cursor {
   height: 180px;
   width: 180px;
@@ -270,7 +274,6 @@ nav {
 }
 
 .tb-title {
-  text-align: center;
   font-family: "ZawyaProBold";
   font-size: 30px;
   line-height: 36px;
@@ -596,7 +599,7 @@ nav {
   display: flex;
   flex: 1;
   color: #696969;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -701,6 +704,8 @@ nav {
 /* ------------------------------------------------------ */
 
 #aboutPage {
+  padding-top: 26px;
+  padding-bottom: 26px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -726,6 +731,7 @@ nav {
 
 .about-image-covevr-main {
   padding: 0px 26px;
+  margin-bottom: 20px;
 }
 
 .about-image-covevr {
@@ -739,26 +745,19 @@ nav {
 }
 
 .about-points-continer {
-  width: 80%;
-  align-self: center;
-  display: flex;
-  margin-top: 60px;
+  width: 100%;
   padding: 0px 26px;
-}
-
-.about-title-cover {
-  width: 26%;
+  padding-top: 30px;
 }
 
 .about-point-description {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-left: 90px;
 }
 
 .about-devider {
-  margin-top: 60px;
+  margin-top: 20px;
   background-color: #dedede;
   height: 1px;
   align-self: center;
@@ -1142,9 +1141,6 @@ textarea {
 }
 
 @media (min-width: 500px) {
-  .about-text-cover {
-    padding: 60px 200px;
-  }
   .books-container {
     flex-direction: row;
     align-items: center;
@@ -1161,6 +1157,7 @@ textarea {
   }
   .about-page-content {
     padding-left: 50px;
+    padding: 0px 46px;
   }
   .title-description-text {
     font-size: 20px;
@@ -1168,7 +1165,7 @@ textarea {
     line-height: 30px;
   }
   .about-image-covevr {
-    height: 600px;
+    height: 400px;
   }
 }
 
@@ -1413,6 +1410,18 @@ textarea {
   .social-icon-cover {
     padding: 26px;
   }
+  .about-title-cover {
+    width: 26%;
+  }
+  .about-points-continer {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    margin-top: 60px;
+  }
+    .about-point-description {
+    padding-left: 40px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1510,6 +1519,19 @@ textarea {
   }
   .service-main-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-point-description {
+    padding-left: 90px;
+  }
+  .about-devider {
+    margin-top: 60px;
+  }
+  .about-image-covevr-main {
+    margin-bottom: 0px;
+  }
+  .about-image-covevr {
+    height: 600px;
   }
 }
 
@@ -1687,6 +1709,9 @@ textarea {
   .footer-container {
     padding: 60px 200px;
     margin-top: 50px;
+  }
+  .about-text-cover {
+    padding: 60px 200px;
   }
 }
 
