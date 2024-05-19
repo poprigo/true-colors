@@ -37,14 +37,26 @@
           <!-- NAV START -->
           <nav>
             <img src="./assets/images/logo.png" class="logo" />
-            <div class="link-cover">
-              <a href="./index.html" class="nav-link">Home</a>
-              <a href="./about.html" class="nav-link nav-link-select">About</a>
-              <a href="./services.html" class="nav-link">Service</a>
-              <a href="#" class="nav-link">Catalog</a>
-              <a href="./contact.html" class="nav-link">Contact</a>
+            <div id="navbar" class="link-cover">
+              <div>
+                <div onclick="menu()" class="mobile-nav">
+                  <img src="./assets/images/logo.png" class="logo" />
+                  <i class="fa-solid fa-xmark close-icon text-right"></i>
+                </div>
+              </div>
+              <div class="nav-menu">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./services.html" class="nav-link">Service</a>
+                <a href="#" class="nav-link">Catalog</a>
+                <a href="./contact.html" class="nav-link nav-link-select"
+                  >Contact</a
+                >
+              </div>
             </div>
-            <i class="fa-solid fa-bars menu-icon"></i>
+            <div onclick="menu()">
+              <i class="fa-solid fa-bars menu-icon"></i>
+            </div>
           </nav>
           <!-- NAV END -->
         </div>
@@ -170,6 +182,19 @@
     </div>
 
     <!-- Script Start -->
+     <script>
+      var x = 0;
+      function menu() {
+        if (x == 0) {
+          document.getElementById("navbar").style.transform =
+            "translateX(100%)";
+          x = 1;
+        } else {
+          document.getElementById("navbar").style.transform = "translateX(0)";
+          x = 0;
+        }
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"

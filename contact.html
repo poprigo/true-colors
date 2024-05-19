@@ -72,23 +72,21 @@
           <!-- NAV START -->
           <nav>
             <img src="./assets/images/logo.png" class="logo" />
-            <div class="nav-black">
-              <div id="navbar" class="link-cover">
-                <div>
-                  <div onclick="menu()" class="mobile-nav">
-                    <img src="./assets/images/logo.png" class="logo" />
-                    <i class="fa-solid fa-xmark close-icon text-right"></i>
-                  </div>
+            <div id="navbar" class="link-cover">
+              <div>
+                <div onclick="menu()" class="mobile-nav">
+                  <img src="./assets/images/logo.png" class="logo" />
+                  <i class="fa-solid fa-xmark close-icon text-right"></i>
                 </div>
-                <div class="nav-menu">
-                  <a href="./index.html" class="nav-link">Home</a>
-                  <a href="./about.html" class="nav-link">About</a>
-                  <a href="./services.html" class="nav-link">Service</a>
-                  <a href="#" class="nav-link">Catalog</a>
-                  <a href="./contact.html" class="nav-link nav-link-select"
-                    >Contact</a
-                  >
-                </div>
+              </div>
+              <div class="nav-menu">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./services.html" class="nav-link">Service</a>
+                <a href="#" class="nav-link">Catalog</a>
+                <a href="./contact.html" class="nav-link nav-link-select"
+                  >Contact</a
+                >
               </div>
             </div>
             <div onclick="menu()">
@@ -259,18 +257,11 @@
       var x = 0;
       function menu() {
         if (x == 0) {
-          //   document.getElementById("navbar").style.display = "block";
-          document.getElementsByClassName("nav-black").style.transform =
-            "translateX(100%)";
           document.getElementById("navbar").style.transform =
             "translateX(100%)";
           x = 1;
         } else {
-          //   document.getElementById("navbar").style.display = "none";
-          document.getElementsByClassName("nav-black").style.transform =
-            "translateX(0)";
           document.getElementById("navbar").style.transform = "translateX(0)";
-
           x = 0;
         }
       }
