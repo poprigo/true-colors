@@ -246,8 +246,8 @@ nav {
   color: #504c4d;
 }
 
-.community-text-centre{
-    text-align: left;
+.community-text-centre {
+  text-align: left;
 }
 
 .user-text-container {
@@ -297,7 +297,7 @@ nav {
 .t-text-cover {
   padding: 30px 20px;
   width: 100%;
-  background-color: #eef2f3;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1308,6 +1308,7 @@ textarea {
   .t-text-cover {
     padding: 0px;
     height: 260px;
+    background-color: #eef2f3;
   }
 
   .mp-l-star {
@@ -1561,9 +1562,8 @@ textarea {
 }
 
 @media (min-width: 992px) {
-    .community-text-centre{
-
-    }
+  .community-text-centre {
+  }
   .mobile-nav {
     display: none;
   }
