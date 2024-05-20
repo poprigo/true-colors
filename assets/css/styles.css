@@ -519,11 +519,38 @@ nav {
   width: 30px;
   background-color: #e6e9e6;
   border-radius: 10px;
-  background-image: url("../images/arrow-up.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-size: 10px;
   background-position: center;
+}
+
+.icon-edit{
+  background-image: url("../images/edit.svg");
+}
+
+.icon-book{
+  background-image: url("../images/book.svg");
+}
+
+.icon-bulk{
+  background-image: url("../images/bulk.svg");
+}
+
+.icon-tree{
+  background-image: url("../images/tree.svg");
+}
+
+.icon-cover{
+  background-image: url("../images/cover.svg");
+}
+
+.icon-paper{
+  background-image: url("../images/paper.svg");
+}
+
+.icon-print{
+  background-image: url("../images/print.svg");
 }
 
 .service-title {
@@ -866,7 +893,7 @@ nav {
   order: 2;
   display: flex;
   flex-direction: column;
-  background-color: #f2f3eb;
+  background-color: #eef2f3;
   padding: 26px;
   border-radius: 20px;
   margin: 0px 26px;
@@ -1026,6 +1053,7 @@ textarea {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  border-radius: 100px;
 }
 
 .form_button:hover {
