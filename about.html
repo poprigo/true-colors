@@ -45,11 +45,11 @@
                 </div>
               </div>
               <div class="nav-menu">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./about.html" class="nav-link">About</a>
-                <a href="./services.html" class="nav-link">Service</a>
-                <a href="#" class="nav-link">Catalog</a>
-                <a href="./contact.html" class="nav-link nav-link-select"
+                <a onclick="closeNavMenu()" href="./index.html" class="nav-link">Home</a>
+                <a onclick="closeNavMenu()" href="./about.html" class="nav-link nav-link-select">About</a>
+                <a onclick="closeNavMenu()" href="./services.html" class="nav-link">Service</a>
+                <a onclick="closeNavMenu()" href="#" class="nav-link">Catalog</a>
+                <a onclick="closeNavMenu()" href="./contact.html" class="nav-link "
                   >Contact</a
                 >
               </div>
@@ -188,6 +188,9 @@
           document.getElementById("navbar").style.transform = "translateX(0)";
           x = 0;
         }
+      }
+      function closeNavMenu() {
+        document.getElementById("navbar").style.transform = "translateX(0)";
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>

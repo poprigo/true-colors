@@ -80,11 +80,11 @@
                 </div>
               </div>
               <div class="nav-menu">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./about.html" class="nav-link">About</a>
-                <a href="./services.html" class="nav-link">Service</a>
-                <a href="#" class="nav-link">Catalog</a>
-                <a href="./contact.html" class="nav-link nav-link-select"
+                <a onclick="closeNavMenu()" href="./index.html" class="nav-link">Home</a>
+                <a onclick="closeNavMenu()" href="./about.html" class="nav-link">About</a>
+                <a onclick="closeNavMenu()" href="./services.html" class="nav-link">Service</a>
+                <a onclick="closeNavMenu()" href="#" class="nav-link">Catalog</a>
+                <a onclick="closeNavMenu()" href="./contact.html" class="nav-link nav-link-select"
                   >Contact</a
                 >
               </div>
@@ -131,7 +131,8 @@
               <div class="contact-icon map-icon"></div>
               <div class="contact-info">
                 <p class="title-description-text text-left mt-0">
-                  Plot no-1, block no-435,nh48 industrial area, b/h.Hotel bhagyoday, kim char rasta,pipodra surat, gujarat, india-394110
+                  Plot no-1, block no-435,nh48 industrial area, b/h.Hotel
+                  bhagyoday, kim char rasta,pipodra surat, gujarat, india-394110
                 </p>
               </div>
             </div>
@@ -264,6 +265,9 @@
           document.getElementById("navbar").style.transform = "translateX(0)";
           x = 0;
         }
+      }
+      function closeNavMenu() {
+        document.getElementById("navbar").style.transform = "translateX(0)";
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
