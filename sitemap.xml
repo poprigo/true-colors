@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://truecolorbooks.com/index.html</loc>
+    <loc>https://truecolorbooks.com/index</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://truecolorbooks.com/about.html</loc>
+    <loc>https://truecolorbooks.com/about</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://truecolorbooks.com/services.html</loc>
+    <loc>https://truecolorbooks.com/services</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://truecolorbooks.com/catalog.html</loc>
+    <loc>https://truecolorbooks.com/catalog</loc>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://truecolorbooks.com/contact.html</loc>
+    <loc>https://truecolorbooks.com/contact</loc>
     <priority>0.64</priority>
   </url>
 </urlset>
