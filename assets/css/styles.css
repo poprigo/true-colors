@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-
 @font-face {
   font-family: "ZawyaProBold";
-  src: url("../fonts/ZawyaPro-WideSemiBold.otf");
+  src: url("../fonts/ZawyaPro-WideSemiBold.ttf");
 }
 
 @font-face {
   font-family: "ZawyaProNormal";
-  src: url("../fonts/ZawyaPro-WideLight.otf");
+  src: url("../fonts/ZawyaPro-WideLight.ttf");
 }
 
 @font-face {
