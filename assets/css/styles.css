@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
 @font-face {
   font-family: "ZawyaProBold";
   src: url("../fonts/ZawyaPro-WideSemiBold.ttf");
@@ -156,7 +158,7 @@ nav {
 }
 
 .nav-link-select {
-  font-family: "ZawyaProBold";
+  font-family: "Montserrat";
 }
 
 /* NAVIGATION END */
@@ -171,7 +173,7 @@ nav {
 }
 
 .hero-title {
-  font-family: "ZawyaProBold";
+  font-family: "Montserrat";
   font-size: 34px;
   line-height: 40px;
 }
@@ -275,7 +277,7 @@ nav {
 
 .count-text {
   font-size: 22px;
-  font-family: "ZawyaProBold";
+  font-family: "Montserrat";
   color: #000;
 }
 
@@ -308,7 +310,7 @@ nav {
 }
 
 .tb-title {
-  font-family: "ZawyaProBold";
+  font-family: "Montserrat";
   font-size: 30px;
   line-height: 36px;
 }
@@ -389,7 +391,7 @@ nav {
 }
 
 .b-price {
-  font-family: "ZawyaProBold";
+  font-family: "Montserrat";
   font-size: 24px;
   color: #1b171d;
   margin-top: 6px;
