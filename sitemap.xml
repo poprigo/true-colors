@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://poprigo.github.io/cosmo-paper/index.html</loc>
+    <loc>https://truecolorbooks.com/index.html</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://poprigo.github.io/cosmo-paper/about.html</loc>
+    <loc>https://truecolorbooks.com/about.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://poprigo.github.io/cosmo-paper/services.html</loc>
+    <loc>https://truecolorbooks.com/services.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://poprigo.github.io/cosmo-paper/catalog.html</loc>
+    <loc>https://truecolorbooks.com/catalog.html</loc>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://poprigo.github.io/cosmo-paper/contact.html</loc>
+    <loc>https://truecolorbooks.com/contact.html</loc>
     <priority>0.64</priority>
   </url>
 </urlset>
