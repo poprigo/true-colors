@@ -1171,7 +1171,7 @@ textarea {
   flex-direction: column;
   position: relative;
   width: 100%;
-  /* height: 195px; */
+  height: 195px;
   /* overflow: hidden; */
   align-items: center;
   justify-content: center;
