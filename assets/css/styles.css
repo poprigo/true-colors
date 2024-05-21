@@ -1546,6 +1546,7 @@ textarea {
     height: 50px;
     width: 50px;
     background-size: 20px;
+    cursor: pointer;
   }
 
   .social-icon-cover {
