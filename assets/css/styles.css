@@ -34,6 +34,7 @@ body {
   margin: 0%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 .d-none {
@@ -105,9 +106,11 @@ nav {
   height: 50px;
   width: "auto";
 }
+
 .text-right {
   text-align: right;
 }
+
 .link-cover {
   /* display: none; */
   z-index: 9999;
@@ -137,6 +140,7 @@ nav {
   padding: 54px 20px;
   gap: 20px;
 }
+
 .menu-icon {
   font-size: 20px;
 }
@@ -324,6 +328,7 @@ nav {
   font-size: 16px;
   margin-top: 8px;
   color: #444645;
+  text-align: center;
 }
 
 .books-container {
@@ -342,6 +347,24 @@ nav {
   padding: 14px;
   padding-bottom: 0;
   overflow: hidden;
+  cursor: none;
+  position: relative;
+}
+
+.custom-cursor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.512);
+  pointer-events: none;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.custom-cursor.zoom-in {
+  transform: scale(1);
 }
 
 .b-one {
@@ -405,6 +428,7 @@ nav {
   background-size: contain;
   background-position: center;
   margin-top: 28px;
+  z-index: 2000;
 }
 
 .b-one-img {
@@ -518,13 +542,12 @@ nav {
 }
 
 .icon-box {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   background-color: #e6e9e6;
   border-radius: 10px;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-size: 10px;
+  background-size: 20px;
   background-position: center;
 }
 
@@ -692,13 +715,11 @@ nav {
 }
 
 .true-color-text {
-  background-image: linear-gradient(
-    to right,
-    #ea4951,
-    #fbb93f,
-    #01adef,
-    #2f9972
-  );
+  background-image: linear-gradient(to right,
+      #ea4951,
+      #fbb93f,
+      #01adef,
+      #2f9972);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* -webkit-text-stroke: 1px #fff; */
@@ -723,7 +744,36 @@ nav {
   background-size: contain;
   background-size: 14px;
   background-position: center;
+  transition: background-color 0.3s ease;
+  /* -webkit-animation: squareToCircle 2s 1s infinite alternate; */
 }
+
+.social-icon:hover{
+    background-color: #ea4951;
+}
+
+/* @-webkit-keyframes squareToCircle {
+    0% {
+      border-radius: 0 0 0 0;
+      transform: rotate(0deg);
+    }
+    25% {
+      border-radius: 50% 0 0 0;
+      transform: rotate(45deg);
+    }
+    50% {
+      border-radius: 50% 50% 0 0;
+      transform: rotate(90deg);
+    }
+    75% {
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(135deg);
+    }
+    100% {
+      border-radius: 50% 50% 50% 50%;
+      transform: rotate(180deg);
+    }
+} */
 
 .fb {
   background-image: url("../images/fb.png");
@@ -744,8 +794,7 @@ nav {
 .logo-bird {
   height: 100px;
   width: "auto";
-  -webkit-filter: drop-shadow(2px 2px 0 #ffffff)
-    drop-shadow(-2px -2px 0 #ffffff);
+  -webkit-filter: drop-shadow(2px 2px 0 #ffffff) drop-shadow(-2px -2px 0 #ffffff);
   filter: drop-shadow(2px 2px 0 #ffffff) drop-shadow(-2px -2px 0 #ffffff);
 }
 
@@ -789,6 +838,7 @@ nav {
 .about-image-covevr-main {
   padding: 0px 16px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .about-image-covevr {
@@ -796,9 +846,11 @@ nav {
   height: 300px;
   background-color: #000;
   border-radius: 20px;
-  background-image: url("../images/about.jpg");
+  /* background-image: url("../images/about.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .about-points-continer {
@@ -996,8 +1048,7 @@ textarea:focus {
 }
 
 select {
-  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png")
-    no-repeat right;
+  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png") no-repeat right;
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1120,8 +1171,8 @@ textarea {
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 195px;
-  overflow: hidden;
+  /* height: 195px; */
+  /* overflow: hidden; */
   align-items: center;
   justify-content: center;
 }
@@ -1129,7 +1180,7 @@ textarea {
 .photobanner {
   position: absolute;
   left: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
   white-space: nowrap;
   animation: bannermove 30s linear infinite;
 }
@@ -1141,6 +1192,7 @@ textarea {
   border-radius: 20px;
   border: 1px solid #f2f2f2;
   object-fit: cover;
+  transition: transform 0.3s ease; 
 }
 
 @keyframes bannermove {
@@ -1151,6 +1203,10 @@ textarea {
   100% {
     transform: translate(-50%, 0);
   }
+}
+
+.zoomed {
+  transform: scale(1.1); /* Increase the scale when zoomed */
 }
 
 .text-center {
@@ -1213,22 +1269,27 @@ textarea {
     gap: 16px;
     margin: 0px;
   }
+
   .book-card {
     width: calc((100% / 3) - 10px);
     min-width: 0px;
   }
+
   .service-main-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .about-page-content {
     padding-left: 50px;
     padding: 0px 46px;
   }
+
   .title-description-text {
     font-size: 20px;
     margin-top: 14px;
     line-height: 30px;
   }
+
   .about-image-covevr {
     height: 400px;
   }
@@ -1238,14 +1299,15 @@ textarea {
   #page1 {
     padding: 26px;
   }
+
   .text-container {
     padding-top: 70px;
   }
 
   .hero-title {
-    font-size: 4.8vw;
+    font-size: 6.8vw;
     max-width: 530px;
-    line-height: 5.4vw;
+    line-height: 7.4vw;
   }
 
   .t-description {
@@ -1395,6 +1457,7 @@ textarea {
   .why-title-container {
     margin-bottom: 50px;
   }
+
   .service-main-container {
     gap: 20px;
   }
@@ -1408,7 +1471,7 @@ textarea {
   .icon-box {
     height: 50px;
     width: 50px;
-    background-size: 20px;
+    background-size: 24px;
   }
 
   .service-title {
@@ -1434,6 +1497,7 @@ textarea {
     line-height: 26px;
     margin-top: 30px;
   }
+
   #page5 {
     padding: 26px;
   }
@@ -1442,6 +1506,7 @@ textarea {
     margin-top: 30px;
     padding: 26px;
   }
+
   .choose-text {
     padding: 0px 26px;
     text-align: left;
@@ -1466,6 +1531,7 @@ textarea {
     margin-top: 30px;
     padding: 26px;
   }
+
   .feedback-text {
     font-size: 36px;
     line-height: 58px;
@@ -1485,28 +1551,34 @@ textarea {
   .social-icon-cover {
     padding: 26px;
   }
+
   .about-title-cover {
     width: 26%;
   }
+
   .about-points-continer {
     width: 80%;
     align-self: center;
     display: flex;
     margin-top: 60px;
   }
+
   .about-point-description {
     padding-left: 40px;
   }
+
   .photobanner img {
     margin: 0 0.5em;
     width: 240px;
     height: 300px;
   }
+
   .our-details-title {
     font-size: 32px;
     font-family: "ZawyaProNormal";
     line-height: 44px;
   }
+
   input[type="text"],
   [type="email"],
   select,
@@ -1522,51 +1594,69 @@ textarea {
     outline: none;
     padding: 0 0 0.875em 0;
   }
+
   .email {
     width: 45%;
   }
+
   .form_button {
     padding: 20px 35px;
   }
+
   .contact-devider {
     width: 80%;
     margin: 16px 0px;
   }
+
   .contact-icon {
     height: 50px;
     width: 50px;
   }
+
   .row {
     margin: 20px 0px;
     align-items: center;
     gap: 20px;
   }
+
   #page7 {
     padding: 26px;
   }
+
   .about-text-cover {
     padding: 40px 26px;
   }
+
   .about-image-covevr-main {
     padding: 0px 26px;
   }
+
   .about-points-continer {
     padding: 0px 26px;
   }
+
   .contact-form-cover {
     padding: 26px;
   }
+
   .contact-details-cover {
     margin: 0px 26px;
   }
 }
 
 @media (min-width: 992px) {
-  .community-text-centre {
+  .hero-title {
+    font-size: 4.8vw;
+    max-width: 530px;
+    line-height: 5.4vw;
   }
+
+  .community-text-centre {}
+
   .mobile-nav {
     display: none;
   }
+
   .link-cover {
     display: flex;
     position: static;
@@ -1580,6 +1670,7 @@ textarea {
     padding: 0px;
     transform: translateX(0);
   }
+
   .nav-menu {
     display: flex;
     gap: 30px;
@@ -1588,6 +1679,7 @@ textarea {
     justify-content: flex-end;
     align-items: center;
   }
+
   .menu-icon {
     visibility: hidden;
     display: none !important;
@@ -1596,6 +1688,7 @@ textarea {
   .hero-content {
     width: 60%;
   }
+
   .hero-image {
     display: flex;
     flex: 1;
@@ -1603,47 +1696,59 @@ textarea {
     background-color: #fee4c9;
     border-radius: 20px;
   }
+
   #page1 {
     display: flex;
     gap: 14px;
   }
+
   .book-card {
     height: 360px;
   }
+
   .service-container:nth-child(2) {
     display: block;
   }
+
   .service-container {
     gap: 20px;
     border-radius: 20px;
   }
+
   .about-cover {
     padding: 62px 110px;
   }
+
   .tb-title {
     font-size: 44px;
     line-height: 60px;
   }
+
   .about-description-text {
     font-size: 20px;
     line-height: 32px;
     margin-top: 30px;
   }
+
   .choose-container {
     flex-direction: row;
   }
+
   .choose-image {
     width: 55%;
     height: 500px;
   }
+
   .choose-text {
     display: flex;
     flex-direction: column;
     height: 500px;
   }
+
   .feedback-container {
     margin-top: 60px;
   }
+
   .user-one {
     height: 90px;
     width: 90px;
@@ -1651,6 +1756,7 @@ textarea {
     margin-top: -277px;
     background-image: url("../images/1.png");
   }
+
   .user-two {
     height: 76px;
     width: 76px;
@@ -1658,11 +1764,13 @@ textarea {
     margin-top: -80px;
     background-image: url("../images/3.png");
   }
+
   .user-three {
     left: 180px;
     margin-top: 186px;
     background-image: url("../images/2.png");
   }
+
   .user-four {
     height: 120px;
     width: 120px;
@@ -1670,6 +1778,7 @@ textarea {
     margin-top: 186px;
     background-image: url("../images/4.png");
   }
+
   .feedback-user {
     height: 76px;
     width: 97px;
@@ -1677,6 +1786,19 @@ textarea {
     background-size: contain;
     position: absolute;
   }
+
+  @keyframes slowShake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(var(--randomX1), var(--randomY1)); }
+    50% { transform: translate(var(--randomX2), var(--randomY2)); }
+    75% { transform: translate(var(--randomX3), var(--randomY3)); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .feedback-user {
+    animation: slowShake 5s infinite;
+  }
+
   .service-main-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1684,40 +1806,50 @@ textarea {
   .about-point-description {
     padding-left: 90px;
   }
+
   .about-devider {
     margin-top: 60px;
   }
+
   .about-image-covevr-main {
     margin-bottom: 0px;
   }
+
   .about-image-covevr {
     height: 600px;
   }
+
   .gallry-container {
     height: 320px;
   }
+
   .our-details-title {
     font-size: 36px;
     line-height: 48px;
   }
+
   .contact-info-continer {
     width: 80%;
     flex-direction: row;
     margin-top: 80px;
     gap: 20px;
   }
+
   .contact-details-cover {
     order: 0;
     width: 40%;
     margin: 0px;
   }
+
   .map {
     width: 80%;
     padding: 0px;
   }
+
   .contact-devider {
     margin: 20px 0px;
   }
+
   .row {
     margin: 10px 0px;
     align-items: center;
@@ -1729,29 +1861,37 @@ textarea {
   #page1 {
     gap: 20px;
   }
+
   .text-container {
     padding-top: 100px;
   }
+
   .hero-content {
     padding-left: 50px;
     width: 55%;
   }
+
   .nav-link {
     font-size: 16px;
   }
+
   .hero-image {
     display: flex;
     flex: 1;
     width: 40%;
     background-color: #fee4c9;
     border-radius: 20px;
+    position: relative;
   }
+
   .girl-image {
     height: 50vw;
     width: 40vw;
     top: 100px;
     right: 160px;
+    transition: transform 0.3s ease-out;
   }
+
   nav {
     padding: 20px;
   }
@@ -1759,60 +1899,75 @@ textarea {
   .nav-menu {
     gap: 36px;
   }
+
   .tb-title {
     font-size: 60px;
     line-height: 80px;
   }
+
   .tb-sub-text {
     font-size: 26px;
     margin-top: 14px;
   }
-  #page2 {
-  }
+
+  #page2 {}
+
   .t-text-cover {
     height: 300px;
   }
+
   .mp-l-star {
     left: 200px;
   }
+
   .mp-r-star {
     right: 200px;
   }
+
   .book-card {
     height: 500px;
     padding: 30px;
     padding-bottom: 0px;
   }
+
   .book-image {
     margin-top: 70px;
   }
+
   .books-container {
     gap: 20px;
   }
+
   .round-button {
     height: 60px;
     width: 60px;
   }
+
   .up-arrow {
     height: 20px;
     width: 20px;
   }
+
   .b-title {
     font-size: 18px;
   }
+
   .b-price {
     font-size: 30px;
     margin-top: 10px;
   }
+
   .best-seller-text {
     font-size: 24px;
     line-height: 24px;
   }
+
   .star {
     height: 50px;
     width: 50px;
     min-width: 50px;
   }
+
   #page3 {
     padding: 26px;
     margin-top: 50px;
@@ -1822,6 +1977,7 @@ textarea {
   #page5 {
     margin-top: 60px;
   }
+
   .about-image {
     height: 200px;
     width: 200px;
@@ -1832,14 +1988,17 @@ textarea {
     right: 70px;
     margin-top: 100px;
   }
+
   .about-cover {
     width: 90%;
     padding: 100px 200px;
   }
+
   .about-description-text {
     font-size: 20px;
     margin-top: 14px;
   }
+
   #page6 {
     margin-top: 50px;
   }
@@ -1848,61 +2007,75 @@ textarea {
     font-size: 24px;
     line-height: 40px;
   }
+
   .community-container {
     margin-top: 60px;
   }
+
   .choose-image {
     height: 600px;
   }
+
   .choose-text {
     height: 600px;
   }
+
   .feedback-user {
     height: 120px;
     width: 120px;
   }
+
   .user-one {
     height: 140px;
     width: 140px;
     left: 400px;
     margin-top: -380px;
   }
+
   .user-two {
     height: 120px;
     width: 120px;
     right: 160px;
     margin-top: -80px;
   }
+
   .user-three {
     left: 230px;
     margin-top: 220px;
   }
+
   .user-four {
     height: 120px;
     width: 120px;
     margin-left: 300px;
     margin-top: 380px;
   }
+
   .mt150 {
     margin-top: 150px;
   }
+
   .feedback-text {
     font-size: 40px;
     line-height: 70px;
     margin-top: 20px;
   }
+
   .feedback-container {
     margin-top: 100px;
     margin-bottom: 50px;
     padding: 26px;
   }
+
   .footer-container {
     padding: 60px 200px;
     margin-top: 50px;
   }
+
   .about-text-cover {
     padding: 60px 200px;
   }
+
   .contact-info-continer {
     gap: 40px;
   }

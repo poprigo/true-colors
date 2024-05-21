@@ -1,289 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>True Colors</title>
-    <link rel="stylesheet" href="./assets//css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/yourcode.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
-      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script>
-      function submitForm() {
-        var form = document.getElementById("contactForm");
-        var submitBtn = document.getElementById("submitBtn");
+  <title>Contact Us - True Colors</title>
 
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-          var formData = new FormData(form);
-          console.log({ formData, form });
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Contact us for inquiries about our premium, eco-friendly notebooks. Reach out to our dedicated team for assistance and queries." />
+  <meta name="keywords"
+    content="contact us, contact, contact details, notebook, notebooks, notebook manufacturing, sustainable notebooks, eco-friendly notebooks, premium notebooks, custom notebooks, personalized notebooks, stationery, writing supplies, journal, journals, sketchbook, sketchbooks, notepad, notepads, paper notebook, spiral notebook, leather notebook, recycled paper notebook, handmade notebook, corporate notebooks, office notebooks, school notebooks, notebook design, notebook printing, notebook binding, notebook cover, notebook paper, sustainable stationery, eco-friendly stationery, customized notebooks, branded notebooks, personalized stationery, writing accessories, pen and paper, writing instruments, creative notebooks, artistic notebooks, executive notebooks, pocket notebook, travel notebook, business notebooks, promotional notebooks, notebook gift, notebook set, bulk notebooks, premium paper notebooks, office supplies, writing tools, India, Indian, Chennai, Mumbai, Delhi, Bangalore, Kolkata, Hyderabad, Ahmedabad, Pune, Surat, Jaipur, Lucknow, Kanpur, Nagpur, Visakhapatnam, Indore, Thane, Bhopal, Patna, Vadodara, Ghaziabad, Ludhiana, Agra, Nashik, Faridabad, Meerut, Rajkot, Kalyan, Dombivali, Vasai-Virar, Varanasi, Srinagar, Aurangabad, Dhanbad">
+  <meta name="author" content="True Colors" />
+  <meta name="robots" content="index, follow" />
 
-          fetch(
-            "https://script.google.com/macros/s/AKfycbx4vakSSht5877EbKnGTvoAjen890fTeBNAD-AuW_KLbCCxr_xfW-SxIp7nLpVZl86K/exec",
-            {
-              method: "POST",
-              body: formData,
-            }
-          )
-            .then((response) => {
-              console.log({ response });
-              if (response.ok) {
-                alert("Your message received!");
-                form.reset();
-              } else {
-                alert("An error occurred. Please try again.");
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert("An error occurred. Please try again.");
-            })
-            .finally(() => {});
-        });
-      }
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact Us - True Colors" />
+  <meta property="og:description"
+    content="Contact us for inquiries about our premium, eco-friendly notebooks. Reach out to our dedicated team for assistance and queries." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yourwebsite.com" />
+  <meta property="og:image" content="./assets/images/logo.png" />
+  <meta property="og:image:alt" content="True Colors" />
+  <meta property="og:site_name" content="True Colors" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Us - True Colors" />
+  <meta name="twitter:description"
+    content="Contact us for inquiries about our premium, eco-friendly notebooks. Reach out to our dedicated team for assistance and queries." />
+  <meta name="twitter:image" content="./assets/images/logo.png" />
+
+  <!-- Geo Targeting -->
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+  <meta name="geo.position" content="13.0827, 80.2707">
+  <meta name="ICBM" content="13.0827, 80.2707">
+
+  <!-- Language Targeting -->
+  <meta http-equiv="Content-Language" content="en-IN">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.yourwebsite.com">
+
+  <!-- Local Business Schema Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "True Colors",
+      "description": "Discover premium, sustainable notebooks crafted for creativity and productivity.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PLOT NO-1, BLOCK NO-435 NH48 INDUSTRIAL AREA, B/H.HOTEL BHAGYODAY, KIM CHAR RASTA,PIPODRA",
+        "addressLocality": "SURAT",
+        "addressRegion": "GUJARAT",
+        "postalCode": "394110",
+        "addressCountry": "IN"
+      },
+      "telephone": "+1234567890",
+      "url": "https://www.yourwebsite.com",
+      "image": "https://www.yourwebsite.com/images/your-logo.png",
+      "priceRange": "$$",
+      "openingHours": "Mo-Sa 09:00-18:00",
+      "sameAs": [
+        "https://www.instagram.com/paperslate.in/",
+        "https://www.facebook.com/paperslate.in",
+      ]
+    }
     </script>
-  </head>
 
-  <body>
-    <div id="main">
-      <div id="aboutPage">
-        <div class="about-page-content">
-          <!-- NAV START -->
-          <nav>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets//css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <script>
+    function submitForm() {
+      var form = document.getElementById("contactForm");
+      var submitBtn = document.getElementById("submitBtn");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var formData = new FormData(form);
+        console.log({ formData, form });
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbx4vakSSht5877EbKnGTvoAjen890fTeBNAD-AuW_KLbCCxr_xfW-SxIp7nLpVZl86K/exec",
+          {
+            method: "POST",
+            body: formData,
+          }
+        )
+          .then((response) => {
+            console.log({ response });
+            if (response.ok) {
+              alert("Your message received!");
+              form.reset();
+            } else {
+              alert("An error occurred. Please try again.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+          })
+          .finally(() => { });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="aboutPage">
+      <div class="about-page-content">
+        <!-- NAV START -->
+        <nav>
+          <a href="/index.html">
             <img src="./assets/images/logo.png" class="logo" />
-            <div id="navbar" class="link-cover">
-              <div>
-                <div onclick="menu()" class="mobile-nav">
-                  <img src="./assets/images/logo.png" class="logo" />
-                  <i class="fa-solid fa-xmark close-icon text-right"></i>
-                </div>
-              </div>
-              <div class="nav-menu">
-                <a onclick="closeNavMenu()" href="./index.html" class="nav-link">Home</a>
-                <a onclick="closeNavMenu()" href="./about.html" class="nav-link">About</a>
-                <a onclick="closeNavMenu()" href="./services.html" class="nav-link">Service</a>
-                <a onclick="closeNavMenu()" href="#" class="nav-link">Catalog</a>
-                <a onclick="closeNavMenu()" href="./contact.html" class="nav-link nav-link-select"
-                  >Contact</a
-                >
+          </a>
+          <div id="navbar" class="link-cover">
+            <div>
+              <div onclick="menu()" class="mobile-nav">
+                <img src="./assets/images/logo.png" class="logo" />
+                <i class="fa-solid fa-xmark close-icon text-right"></i>
               </div>
             </div>
-            <div onclick="menu()">
-              <i class="fa-solid fa-bars menu-icon"></i>
-            </div>
-          </nav>
-          <!-- NAV END -->
-        </div>
-
-        <div class="about-text-cover">
-          <h1 class="hero-title">Contact Us</h1>
-          <p class="title-description-text">
-            Our professional team is readily available to address your needs and
-            provide timely and informed responses. You can reach us through the
-            contact form below.
-          </p>
-        </div>
-
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4969.511512022262!2d72.89553479554631!3d21.22760331770742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f5e3f2bb84d%3A0xf95fa453e0005985!2sSarthana%20Jakat%20Naka%2C%20Nana%20Varachha%2C%20Surat%2C%20Gujarat%20395006!5e0!3m2!1sen!2sin!4v1715660653022!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
-        </div>
-
-        <div class="contact-info-continer">
-          <div class="contact-details-cover">
-            <h1 class="our-details-title">Our Details</h1>
-            <p class="title-description-text text-left mt-0">
-              Most Popular Book Of The Year! Most Popular Book Of The Year!
-            </p>
-
-            <div class="contact-devider"></div>
-
-            <div class="row">
-              <div class="contact-icon map-icon"></div>
-              <div class="contact-info">
-                <p class="title-description-text text-left mt-0">
-                  Plot no-1, block no-435,nh48 industrial area, b/h.Hotel
-                  bhagyoday, kim char rasta,pipodra surat, gujarat, india-394110
-                </p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="contact-icon call"></div>
-              <div class="contact-info">
-                <p class="title-description-text text-left mt-0">
-                  +91 84604 94287
-                </p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="contact-icon email-icon"></div>
-              <div class="contact-info">
-                <p class="title-description-text text-left mt-0">
-                  info@truecolorbooks.com
-                </p>
-              </div>
+            <div class="nav-menu">
+              <a onclick="closeNavMenu()" href="./index.html" class="nav-link">Home</a>
+              <a onclick="closeNavMenu()" href="./about.html" class="nav-link">About</a>
+              <a onclick="closeNavMenu()" href="./services.html" class="nav-link">Service</a>
+              <a onclick="closeNavMenu()" href="#" class="nav-link">Catalog</a>
+              <a onclick="closeNavMenu()" href="./contact.html" class="nav-link nav-link-select">Contact</a>
             </div>
           </div>
-          <div class="contact-form-cover">
-            <h1 class="our-details-title">Leave Us A Message</h1>
-            <p class="title-description-text text-left mt-0">
-              Let us know what's on your mind and we will get back to you as
-              soon as possible!
-            </p>
-            <form id="contactForm">
-              <div class="name">
-                <input
-                  type="text"
-                  placeholder="My name is"
-                  name="name"
-                  id="name"
-                  required
-                />
-              </div>
-              <div class="email">
-                <input
-                  type="email"
-                  placeholder="My e-mail is"
-                  name="email"
-                  id="email"
-                  required
-                />
-              </div>
-              <div class="telephone">
-                <input
-                  type="text"
-                  placeholder="My number is"
-                  name="telephone"
-                  id="telephone"
-                  required
-                />
-              </div>
-              <div class="subject">
-                <select
-                  id="subject"
-                  placeholder="Subject line"
-                  name="subject"
-                  id="subject_input"
-                  required
-                >
-                  <option disabled hidden selected>Subject line</option>
-                  <option>Want Books in Bulk</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="message">
-                <textarea
-                  name="message"
-                  placeholder="I'd like to chat about"
-                  id="message"
-                  cols="30"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <div class="submit">
-                <input
-                  type="submit"
-                  value="Send Message"
-                  class="form_button"
-                  id="submitBtn"
-                />
-              </div>
-            </form>
-            <script>
-              submitForm(); // Call the function to handle form submission
-            </script>
+          <div onclick="menu()">
+            <i class="fa-solid fa-bars menu-icon"></i>
           </div>
-        </div>
+        </nav>
+        <!-- NAV END -->
       </div>
 
-      <!--  Footer Section End -->
-      <div id="page7">
-        <div class="footer-container">
-          <h1 class="tb-title true-color-text">True Colors</h1>
-          <p class="about-description-text">
-            Your premier partner in the dynamic world of fashion supply. With a
-            passion for style and an unwavering commitment to excellence, we
-            stand as a trusted supplier for the fashion industry.
+      <div class="about-text-cover">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="title-description-text">
+          Our professional team is readily available to address your needs and
+          provide timely and informed responses. You can reach us through the
+          contact form below.
+        </p>
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4969.511512022262!2d72.89553479554631!3d21.22760331770742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f5e3f2bb84d%3A0xf95fa453e0005985!2sSarthana%20Jakat%20Naka%2C%20Nana%20Varachha%2C%20Surat%2C%20Gujarat%20395006!5e0!3m2!1sen!2sin!4v1715660653022!5m2!1sen!2sin"
+          width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="contact-info-continer">
+        <div class="contact-details-cover">
+          <h1 class="our-details-title">Our Details</h1>
+          <p class="title-description-text text-left mt-0">
+            Most Popular Book Of The Year! Most Popular Book Of The Year!
           </p>
-          <div class="social-icon-cover">
-            <div class="social-icon fb"></div>
-            <div class="social-icon insta"></div>
-            <div class="social-icon x"></div>
-            <div class="social-icon linkedin"></div>
+
+          <div class="contact-devider"></div>
+
+          <div class="row">
+            <div class="contact-icon map-icon"></div>
+            <div class="contact-info">
+              <p class="title-description-text text-left mt-0">
+                Plot no-1, block no-435,nh48 industrial area, b/h.Hotel
+                bhagyoday, kim char rasta,pipodra surat, gujarat, india-394110
+              </p>
+            </div>
           </div>
 
-          <div class="devider"></div>
-          <p class="about-description-text">
-            Copyright &#169; 2024. All Rights Reserved.
+          <div class="row">
+            <div class="contact-icon call"></div>
+            <div class="contact-info">
+              <p class="title-description-text text-left mt-0">
+                +91 84604 94287
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="contact-icon email-icon"></div>
+            <div class="contact-info">
+              <p class="title-description-text text-left mt-0">
+                info@truecolorbooks.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-cover">
+          <h1 class="our-details-title">Leave Us A Message</h1>
+          <p class="title-description-text text-left mt-0">
+            Let us know what's on your mind and we will get back to you as
+            soon as possible!
           </p>
+          <form id="contactForm">
+            <div class="name">
+              <input type="text" placeholder="My name is" name="name" id="name" required />
+            </div>
+            <div class="email">
+              <input type="email" placeholder="My e-mail is" name="email" id="email" required />
+            </div>
+            <div class="telephone">
+              <input type="text" placeholder="My number is" name="telephone" id="telephone" required />
+            </div>
+            <div class="subject">
+              <select id="subject" placeholder="Subject line" name="subject" id="subject_input" required>
+                <option disabled hidden selected>Subject line</option>
+                <option>Want Books in Bulk</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="message">
+              <textarea name="message" placeholder="I'd like to chat about" id="message" cols="30" rows="5"
+                required></textarea>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Send Message" class="form_button" id="submitBtn" />
+            </div>
+          </form>
+          <script>
+            submitForm(); // Call the function to handle form submission
+          </script>
         </div>
       </div>
-      <!--  Footer Section End -->
     </div>
 
-    <!-- Script Start -->
-    <script>
-      var x = 0;
-      function menu() {
-        if (x == 0) {
-          document.getElementById("navbar").style.transform =
-            "translateX(100%)";
-          x = 1;
-        } else {
-          document.getElementById("navbar").style.transform = "translateX(0)";
-          x = 0;
-        }
-      }
-      function closeNavMenu() {
+    <!--  Footer Section End -->
+    <div id="page7">
+      <div class="footer-container">
+        <h1 class="tb-title true-color-text">True Colors</h1>
+        <p class="about-description-text">
+          Your trusted source for premium, sustainable notebooks. We blend
+          quality and craftsmanship to bring you stationery that inspires
+          creativity and stands the test of time.
+        </p>
+        <div class="social-icon-cover">
+          <div class="social-icon fb"></div>
+          <div class="social-icon insta"></div>
+          <div class="social-icon x"></div>
+          <div class="social-icon linkedin"></div>
+        </div>
+
+        <div class="devider"></div>
+        <p class="about-description-text">
+          Copyright &#169; 2024. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <!--  Footer Section End -->
+  </div>
+
+  <!-- Script Start -->
+  <script>
+    var x = 0;
+    function menu() {
+      if (x == 0) {
+        document.getElementById("navbar").style.transform =
+          "translateX(100%)";
+        x = 1;
+      } else {
         document.getElementById("navbar").style.transform = "translateX(0)";
+        x = 0;
       }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./assets/js/script.js"></script>
-    <!-- Script Over -->
-  </body>
+    }
+    function closeNavMenu() {
+      document.getElementById("navbar").style.transform = "translateX(0)";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/script.js"></script>
+  <!-- Script Over -->
+</body>
+
 </html>
