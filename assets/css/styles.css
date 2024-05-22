@@ -428,7 +428,7 @@ nav {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  margin-top: 28px;
+  margin-top: 10px;
   z-index: 2000;
 }
 
@@ -1431,7 +1431,7 @@ textarea {
     height: auto;
     width: auto;
     flex: 1;
-    margin-top: 48px;
+    margin-top: 20px;
   }
 
   #page3 {
@@ -1933,7 +1933,7 @@ textarea {
   }
 
   .book-image {
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
   .books-container {
