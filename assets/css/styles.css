@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap");
 
 @font-face {
   font-family: "ZawyaProBold";
@@ -27,6 +27,27 @@
   box-sizing: border-box;
   font-family: "GilroyRegular";
 }
+
+/* Loader */
+.btnloader {
+  display: none;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid orange;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* End of Loader */
 
 html,
 body {
@@ -716,11 +737,13 @@ nav {
 }
 
 .true-color-text {
-  background-image: linear-gradient(to right,
-      #ea4951,
-      #fbb93f,
-      #01adef,
-      #2f9972);
+  background-image: linear-gradient(
+    to right,
+    #ea4951,
+    #fbb93f,
+    #01adef,
+    #2f9972
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* -webkit-text-stroke: 1px #fff; */
@@ -749,8 +772,8 @@ nav {
   /* -webkit-animation: squareToCircle 2s 1s infinite alternate; */
 }
 
-.social-icon:hover{
-    background-color: #ea4951;
+.social-icon:hover {
+  background-color: #ea4951;
 }
 
 /* @-webkit-keyframes squareToCircle {
@@ -795,7 +818,8 @@ nav {
 .logo-bird {
   height: 100px;
   width: "auto";
-  -webkit-filter: drop-shadow(2px 2px 0 #ffffff) drop-shadow(-2px -2px 0 #ffffff);
+  -webkit-filter: drop-shadow(2px 2px 0 #ffffff)
+    drop-shadow(-2px -2px 0 #ffffff);
   filter: drop-shadow(2px 2px 0 #ffffff) drop-shadow(-2px -2px 0 #ffffff);
 }
 
@@ -1049,7 +1073,8 @@ textarea:focus {
 }
 
 select {
-  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png") no-repeat right;
+  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png")
+    no-repeat right;
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1187,13 +1212,15 @@ textarea {
 }
 
 .photobanner img {
+  padding: 20px;
+  background-color: #f7f7f7;
   margin: 0 0.5em;
-  width: 200px;
-  height: 225px;
-  border-radius: 20px;
+  width: 180px;
+  height: 205px;
+  border-radius: 16px;
   border: 1px solid #f2f2f2;
   object-fit: cover;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 @keyframes bannermove {
@@ -1570,9 +1597,11 @@ textarea {
   }
 
   .photobanner img {
+    padding: 30px;
+    background-color: #f7f7f7;
     margin: 0 0.5em;
-    width: 240px;
-    height: 300px;
+    width: 220px;
+    height: 280px;
   }
 
   .our-details-title {
@@ -1653,7 +1682,8 @@ textarea {
     line-height: 5.4vw;
   }
 
-  .community-text-centre {}
+  .community-text-centre {
+  }
 
   .mobile-nav {
     display: none;
@@ -1790,13 +1820,23 @@ textarea {
   }
 
   @keyframes slowShake {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(var(--randomX1), var(--randomY1)); }
-    50% { transform: translate(var(--randomX2), var(--randomY2)); }
-    75% { transform: translate(var(--randomX3), var(--randomY3)); }
-    100% { transform: translate(0, 0); }
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(var(--randomX1), var(--randomY1));
+    }
+    50% {
+      transform: translate(var(--randomX2), var(--randomY2));
+    }
+    75% {
+      transform: translate(var(--randomX3), var(--randomY3));
+    }
+    100% {
+      transform: translate(0, 0);
+    }
   }
-  
+
   .feedback-user {
     animation: slowShake 5s infinite;
   }
@@ -1912,7 +1952,8 @@ textarea {
     margin-top: 14px;
   }
 
-  #page2 {}
+  #page2 {
+  }
 
   .t-text-cover {
     height: 300px;
@@ -2104,6 +2145,10 @@ textarea {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
