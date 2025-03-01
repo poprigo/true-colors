@@ -390,15 +390,15 @@ nav {
 }
 
 .b-one {
-  background-color: #f3eee8;
+  background-color: #ebfafc;
 }
 
 .b-two {
-  background-color: #e8ecef;
+  background-color: #fff7f9;
 }
 
 .b-three {
-  background-color: #f4e9e6;
+  background-color: #fffee3;
 }
 
 .b-card-header {
@@ -1996,7 +1996,7 @@ textarea {
   }
 
   .b-price {
-    font-size: 30px;
+    font-size: 26px;
     margin-top: 10px;
   }
 
